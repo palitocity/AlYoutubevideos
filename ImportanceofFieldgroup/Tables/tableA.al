@@ -23,19 +23,19 @@ table 60001 TableA
             var
                 TableA: Record TableA;
             begin
-                if TableA.Get(Name) then begin
-                    Message('Table A Rec, %1', TableA.id);
-                end;
+                // if TableA.Get(Name) then begin
+                //     Message('Table A Rec, %1', TableA.id);
+                // end;
 
-                TableA.SetCurrentKey(Name);
-                TableA.SetRange(Name, '1000','2000');
+                // TableA.SetCurrentKey(Name);
+                // TableA.SetRange(Name, '1000','2000');
 
-                TableA.SetFilter(Name,'>%1 <> %2','1000','3000' );
+                // TableA.SetFilter(Name,'>%1 <> %2','1000','3000' );
 
-                if TableA.Count > 1 then begin 
+                // if TableA.Count > 1 then begin 
 
-                    
-                end
+
+                // end
 
 
 
