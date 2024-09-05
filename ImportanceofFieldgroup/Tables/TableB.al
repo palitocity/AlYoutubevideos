@@ -40,28 +40,37 @@ table 60000 TableB
     fieldgroups
     {
         // Add changes to field groups here
-       
+
     }
 
     var
-        myInt: Integer;
+        requiredLineWarning: Label 'You are required to expense the individual company share on the line of this document!';
 
-    trigger OnInsert()
+
+    procedure EchoName(username: Text)
+    var
+        IsHandled: Boolean;
+    begin
+        Message('Original name is %1', username);
+
+        onBeforeAlterEchoNameFunction(username);
+
+        Message('Changed name is %1', username);
+
+        onAfterAlterEchoNameFunction(username);
+
+        Message('Final name is %1', username);
+
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure onBeforeAlterEchoNameFunction(Var username: Text)
     begin
 
     end;
 
-    trigger OnModify()
-    begin
-
-    end;
-
-    trigger OnDelete()
-    begin
-
-    end;
-
-    trigger OnRename()
+    [IntegrationEvent(true, false)]
+    local procedure onAfterAlterEchoNameFunction(Var username: Text)
     begin
 
     end;

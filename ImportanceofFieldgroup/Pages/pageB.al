@@ -39,15 +39,22 @@ page 60001 "Page B Card"
             action(ActionName)
             {
                 ApplicationArea = All;
-
+                Promoted = true;
+                Caption = 'Echo Name';
                 trigger OnAction()
+                var
+                    username: Text;
                 begin
-
+                    username := 'Dayo';
+                    Rec.EchoName(username);
                 end;
             }
         }
     }
 
+
+
+
     var
-        myInt: Integer;
+        requiredLineWarning: Label 'You are required to expense the individual company share on the line of this document!';
 }

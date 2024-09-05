@@ -1,12 +1,20 @@
-tableextension 60051 "Posted Purchase Invoice" extends "Purch. Inv. Header"
+tableextension 60088 MyExtension extends "User Setup"
 {
     fields
     {
         // Add changes to table fields here
-        field(50080; "Other Description"; Text[100])
+        field(88888; "Full Name"; Text[50])
         {
             DataClassification = ToBeClassified;
-        
+            trigger OnValidate()
+            begin
+
+            end;
+
+            trigger OnLookup()
+            begin
+
+            end;
         }
     }
 
@@ -21,5 +29,7 @@ tableextension 60051 "Posted Purchase Invoice" extends "Purch. Inv. Header"
     }
 
     var
-        requiredLineWarning: Label 'You are required to expense the individual company share on the line of this document!';
+        myInt: Integer;
+
+    
 }

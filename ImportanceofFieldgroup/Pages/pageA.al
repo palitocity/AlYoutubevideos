@@ -15,6 +15,10 @@ page 60003 "Page A Card"
                 field(id; Rec.id)
                 {
                     ToolTip = 'Specifies the value of the id field.', Comment = '%';
+                    trigger OnValidate()
+                    begin
+
+                    end;
                 }
                 field(Name; Rec.Name)
                 {
@@ -46,5 +50,5 @@ page 60003 "Page A Card"
     }
 
     var
-        myInt: Integer;
+        requiredLineWarning: Label 'You are required to expense the individual company share on the line of this document!';
 }

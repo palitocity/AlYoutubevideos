@@ -85,7 +85,7 @@ TABLE.GET()
     }
 
     var
-        myInt: Integer;
+        requiredLineWarning: Label 'You are required to expense the individual company share on the line of this document!';
 
     trigger OnInsert()
     begin

@@ -8,7 +8,7 @@ pageextension 60051 "Posted Purchase inv ext" extends "Posted Purchase Invoice"
             field("Other Description"; Rec."Other Description")
             {
                 ApplicationArea = Basic, Suite;
-                 MultiLine = true;
+                MultiLine = true;
             }
         }
     }
@@ -19,5 +19,5 @@ pageextension 60051 "Posted Purchase inv ext" extends "Posted Purchase Invoice"
     }
 
     var
-        myInt: Integer;
+        requiredLineWarning: Label 'You are required to expense the individual company share on the line of this document!';
 }
